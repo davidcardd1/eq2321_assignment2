@@ -91,36 +91,36 @@ function [E, V, A, P] = analysis(x, N, U, M)
     e = e + U;
   end
     
-  figure(1);clf;
-  subplot(3,2,1)
-  plot(x)
-  axis([1 length(x) min(x) max(x)]);
-
-  subplot(3,2,2)
-  plot(E)
-  axis([1 length(E) min(E) max(E)]);
-  
-  subplot(3,2,3)
-  plot(V, '.')
-  axis([1 length(V) min(V) max(V)]);
-
-  subplot(3,2,4)
-  plot(ZC)
-  axis([1 length(ZC) min(ZC) max(ZC)]);
-
-  subplot(3,2,5)
-  F = 8000./P;
-  plot(F)
-  axis([1 length(F) 0 600]);
-  
-  subplot(3,2,6)
-  S = zeros(512, n_frames);
-  for n=1:n_frames
-    S(:,n) = 20*log10(abs(freqz(1,A(n,:),512)));
-  end
-  S = flipud(S);
-  colormap(gray);
-  imagesc(S);  
+%   figure(1);clf;
+%   subplot(3,2,1)
+%   plot(x)
+%   axis([1 length(x) min(x) max(x)]);
+% 
+%   subplot(3,2,2)
+%   plot(E)
+%   axis([1 length(E) min(E) max(E)]);
+%   
+%   subplot(3,2,3)
+%   plot(V, '.')
+%   axis([1 length(V) min(V) max(V)]);
+% 
+%   subplot(3,2,4)
+%   plot(ZC)
+%   axis([1 length(ZC) min(ZC) max(ZC)]);
+% 
+%   subplot(3,2,5)
+%   F = 8000./P;
+%   plot(F)
+%   axis([1 length(F) 0 600]);
+%   
+%   subplot(3,2,6)
+%   S = zeros(512, n_frames);
+%   for n=1:n_frames
+%     S(:,n) = 20*log10(abs(freqz(1,A(n,:),512)));
+%   end
+%   S = flipud(S);
+%   colormap(gray);
+%   imagesc(S);  
     
   
 function p = pitch1(in)

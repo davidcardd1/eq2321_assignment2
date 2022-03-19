@@ -5,10 +5,10 @@ function Aq = decodefilter(codeA,cb1,cb2)
         idx2 = codeA(i, 2);
         
         lsf = cb1(idx1, :);
-        res = cb2(idx2, :);
+        residual = cb2(idx2, :);
         
-        Alsf = sort(lsf + res);
+        output = sort(lsf + residual);
         
-        Aq(i, :) = lsf2poly(Alsf);
+        Aq(i, :) = lsf2poly(output);
     end
 end
